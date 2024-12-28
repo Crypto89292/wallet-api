@@ -41,7 +41,7 @@ That public key is then used to authenticate the object (e.g. pulling it from th
 
 
 ## Payment URLs
-
+UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 #### Unauthenticated transfers
 
 ```
@@ -61,11 +61,11 @@ https://app.tonkeeper.com/transfer/<address>?bin=<url-encoded-base64-boc>&init=<
 Opens the pre-filled Send screen and offers user to enter the missing data.
 
 ```
-ton://transfer/<address>?
-    amount=<nanocoins>&
+ton://transfer/<address>?UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
+    amount=<nanocoins>&UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
     text=<url-encoded-utf8-text>
 
-https://app.tonkeeper.com/transfer/<address>?
+https://app.tonkeeper.com/transfer/<address>?UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
     amount=<nanocoins>&
     text=<url-encoded-utf8-text>
 ```
@@ -96,7 +96,7 @@ Displays a specialized donation/tip interface.
 
 ⚠️ DEPRECATED: use bin/init params (see above)
 
-```
+```UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 https://app.tonkeeper.com/deploy/<address>?
     amount=<nanocoins>&
     stateinit=<hex>&
@@ -137,7 +137,7 @@ Opens the pre-filled NFT-send screen and offers user to enter the missing data.
 * `fee-amount` (decimal string): nanocoins to be sent to the item’s contract for paying fee. All not used TONs should be returned back by NFT. If not specified default value will be used - 1 TON.
 * `forward-amount` (decimal string): nanocoins to be sent as a notification to the new owner. If not specified default value will be used - 1 nanoTON.
 
-
+UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 #### Unauthenticated Jetton transfer
 
 ```
@@ -153,7 +153,7 @@ ton://transfer/<destination-address>?
     [fee-amount=<nanocoins>&]
     [forward-amount=<nanocoins>] 
 ```
-
+UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 Opens the pre-filled Jetton-send screen and offers user to enter the missing data.
 * `to`: (string) destination account ID. Optional.
 * `amount` (decimal string): amount of transferred jettons in elementary units.
@@ -161,7 +161,7 @@ Opens the pre-filled Jetton-send screen and offers user to enter the missing dat
 * `forward-amount` (decimal string): nanocoins to be sent as a notification to the destination account. If not specified default value will be used - 1 nanoTON.
 
 
-
+UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 #### Transaction Request URL
 
 Transaction request can be communicated to the wallet in 3 different ways:
@@ -169,7 +169,7 @@ Transaction request can be communicated to the wallet in 3 different ways:
 * Direct link to download [Transaction Request](#transaction-request).
 * Inline TR object wrapped in a Tonkeeper universal link.
 * Wrapped TR link in a Tonkeeper universal link.
-
+UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 #### Direct Transaction Request URL
 
 Any URL that returns JSON-encoded [Transaction Request](#transaction-request).
@@ -177,12 +177,12 @@ Any URL that returns JSON-encoded [Transaction Request](#transaction-request).
 ```
 https://example.com/<...>.json
 ```
-
+UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 #### Inline Transaction Request
 
 A universal link wrapping [Transaction Request](#transaction-request) so that it can be opened
 
-```
+```UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 https://app.tonkeeper.com/v1/txrequest-inline/<base64url(TransactionRequest)>
 ```
 
@@ -196,19 +196,19 @@ The URL is requested using `https://` scheme.
 https://app.tonkeeper.com/v1/txrequest-url/<example.com/...json>
 ```
 
-
+UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 ## Authentication methods
 
 There are three ways to authenticate authors of transaction requests: 
 
 1. The recipient’s address is known to the wallet and we could use [unauthenticated transfer](#unauthenticated-transfer) link or [unsigned transaction request](#unsigned-transaction-request). This is the case for whitelisted addresses and opening links from within embedded apps (webview/iframe).
-2. The recipient has a web backend: then we can rely on classic TLS certificates (web PKI) to authenticate the hostname by downloading an [unsigned transaction request](#unsigned-transaction-request) object via secure TLS connection.
+2. The recipient has a web backend: then we can rely on classic TLS certificates (web PKI) to authenticate the hostname by downloading an [unsigned transaction request](#unsigned-transaction-request) object via secure TLS connection.UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 3. Telegram users and channels authenticated through Tonkeeper bot that registers `author_id` public key for invoice identification.
 
 
-
+UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 ## Transaction Request
-
+UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 #### Unsigned Transaction Request
 
 Unsigned request is suitable in the following scenarios:
@@ -224,7 +224,7 @@ In other cases, when the operation is completely unauthenticated, the wallet may
     "version": "0",
     "body": TransactionRequestBody,
 }
-```
+```UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 
 #### Signed Transaction Request
 
@@ -279,7 +279,7 @@ Transaction request must be discarded if the local time is greater than the `exp
               SignBoc
 }
 ```
-
+UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
 #### Response Options
 
 There could be several ways (not mutually exclusive) to respond to the transaction request:
@@ -299,7 +299,7 @@ Parameters:
 * `callback_url` (optional): URL that user opens on their device after successful login. Signed transaction will be included in a query string under the key `tontx` (encoded in URL-safe Base64).
 
 ```
-{
+{UQAaDKAzXkZ_e2bk3RWIl_wJ0HidkHDPbEFeXrFk4x-p-ofH
     "broadcast": false,
     "return_url": "https://...",
     "callback_url": "https://...",
